@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda de Videojuegos</title>
+    <!-- Agrega aquí tu hoja de estilos -->
+      <style>
+        .navbar-nav {
+            margin: 0 auto; /* Centra horizontalmente los elementos de la barra de navegación */
+            display: flex; /* Utiliza flexbox para centrar los elementos */
+            justify-content: center; /* Centra los elementos horizontalmente */
+        }
+        
+        .navbar-brand {
+            margin-left: 30px; /* Ajusta el valor según sea necesario */
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .navbar-nav .nav-link {
+                font-family: "Poppins", sans-serif;
+                transition: all ease-out 0.3s;
+                padding: 10px 15px; /* Ajusta el relleno según sea necesario */
+                margin-left: 30px; /* Ajusta el valor según sea necesario */
+            }
+            
+            .navbar-nav .nav-link:hover {
+                transform: scale(1.55); /* Escala el texto al pasar el cursor */
+                color:brown;
+            }
+            
+            .navbar {
+                height: 80px; /* Ajusta el valor de la altura según sea necesario */
+            }
+        }
+        
+        /* Estilos para los submenús */
+        .navbar-nav ul {
+            display: none; /* Oculta los submenús por defecto */
+            position: absolute; /* Posiciona los submenús de manera absoluta */
+            background-color: #fff; /* Color de fondo del submenú */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra del submenú */
+            padding: 10px 0; /* Espaciado interno del submenú */
+            border-radius: 5px; /* Borde redondeado del submenú */
+            width: 200px; /* Ancho del submenú */
+        }
+        
+        .navbar-nav li:hover > ul {
+            display: block; /* Muestra el submenú cuando el elemento padre es hover */
+        }
+        
+        .navbar-nav ul li {
+            display: block; /* Ajusta el comportamiento de los elementos del submenú */
+            margin: 0; /* Ajusta el margen */
+        }
+        
+        .navbar-nav ul li a {
+            padding: 10px 20px; /* Ajusta el relleno */
+            color: #333; /* Color del texto */
+            text-decoration: none; /* Quita la decoración de texto */
+            transition: all ease-out 0.3s; /* Transición suave */
+            display: block; /* Para que los enlaces ocupen todo el ancho del submenú */
+        }
+        
+        .navbar-nav ul li a:hover {
+            background-color: #f2f2f2; /* Cambia el color de fondo al pasar el cursor */
+            color: brown; /* Cambia el color del texto al pasar el cursor */
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tu Tienda de Videojuegos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="/#section1">Inicio</a>
+                    <li>
+                    <a class="nav-link" href="/ventas">Ventas</a>
+                     <ul>
+                        <li><a href="#">Caja</a></li>
+                        <li><a href="/clientes">Cliente</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#section2">Servicios</a>
+                        <ul>
+                            <li><a class="nav-sub" href="#">Almacen</a></li>
+                            <li><a class="nav-sub" href="#">Orden de Compra</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="">Control de Inventario</a>
+                    <ul>
+                        <li><a href="/#section3">Producto</a></li>
+                        <li><a href="#">Categoría</a></li> <!-- Aquí puedes agregar categorías específicas de videojuegos -->
+                    </ul>
+                   </li>
+                    <a class="nav-link" href="/#section4">Contactanos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Resto de tu contenido HTML -->
+</body>
+</html>

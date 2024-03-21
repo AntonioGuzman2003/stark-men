@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura de Compra</title>
+    <style>
+        body {
+            background: #E0E4E5;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .wrap > h1 {
+            color: #494B4D;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 15px 0px;
+        }
+
+        .invoice {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
+        }
+
+        .invoice h2 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>¡Gracias por tu compra!</h1>
+        <div class="invoice">
+            <h2>Factura de Compra</h2>
+         <div class="invoice-details">
+            <p><strong>Producto:</strong> {{productName}}</p>
+          <!--  <img src="{{productImage}}" alt="Imagen del producto"> -->
+            <p><strong>Precio Unitario:</strong> ${{productPrice}}</p>
+            <p><strong>Cantidad:</strong> {{cantidad}}</p>
+            <p><strong>Precio Total:</strong> ${{totalPrice}}</p>
+        </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

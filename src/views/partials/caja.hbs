@@ -1,0 +1,77 @@
+<style>
+    body{
+	background: #E0E4E5;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrap{
+	max-width: 1100px;
+	width: 90%;
+	margin: auto;
+}
+
+.wrap > h1{
+	color: #494B4D;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 15px 0px;
+}
+</style>
+<br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ventas</title>
+</head>
+    <br>
+    <br>
+    </br>
+
+     <div class="wrap">
+        <h1>¡Bienvenido a la página de ventas!</h1>
+        
+        <!-- Mostrar detalles del producto seleccionado -->
+      <div id="product-details">
+    <h2>Detalles del Producto</h2>
+    <p id="product-name">Producto: {{productName}}</p>
+    <p id="product-price">Precio: ${{productPrice}}</p>
+    <!--<img id="product-image" src="{{productImage}}" alt="Imagen del producto"> -->
+</div>
+
+
+         <div>
+        <h2>Formulario de Compra</h2>
+        <form action="/realizarCompra" method="POST">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+            <!-- Agregar campos ocultos para enviar los datos necesarios -->
+            <input type="hidden" id="productName" name="productName" value="{{productName}}">
+            <input type="hidden" id="productPrice" name="productPrice" value="{{productPrice}}">
+            <button type="submit">Comprar</button>
+        </form>
+    </div>
+
+    <!-- Agrega más contenido según sea necesario -->
+
+</body>
+ <script>
+        // Obtener parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('producto');
+        const productPrice = urlParams.get('precio');
+       // const productImage = urlParams.get('imagen');
+        const cantidad = document.getElementById('cantidad').value; // Obtener cantidad del formulario de ventas
+        // Mostrar detalles del producto
+        document.getElementById('product-name').textContent = 'Producto: ' + productName;
+        document.getElementById('product-price').textContent = 'Precio: $' + productPrice;
+      //  document.getElementById('product-image').src = productImage;
+        // Establecer los valores de los campos ocultos directamente
+    document.getElementById('productName').value = productName;
+    document.getElementById('productPrice').value = productPrice;
+   // document.getElementById('productImage').value = productImage;
+    </script>
+</html>
