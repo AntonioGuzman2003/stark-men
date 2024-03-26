@@ -4,19 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Cliente</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Agregar Nuevo Cliente</h1>
-    <form action="/clientes/nuevo" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" ><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" ><br><br>
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono"><br><br>
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion"><br><br>
-        <button type="submit">Agregar Cliente</button>
-    </form>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="mt-4">Agregar Nuevo Cliente</h1>
+                <form action="/clientes/nuevo" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Incluye jQuery y Bootstrap JS (opcional, pero necesario para algunas funcionalidades de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

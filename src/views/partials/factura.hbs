@@ -11,9 +11,10 @@
         }
 
         .wrap {
-            max-width: 1100px;
+            max-width: 500px;
             width: 90%;
             margin: auto;
+            margin-top: 250px;
         }
 
         .wrap > h1 {
@@ -44,7 +45,9 @@
 
         .invoice-details p {
             margin: 5px 0;
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
@@ -54,13 +57,10 @@
             <h2>Factura de Compra</h2>
          <div class="invoice-details">
             <p><strong>Producto:</strong> {{productName}}</p>
-          <!--  <img src="{{productImage}}" alt="Imagen del producto"> -->
             <p><strong>Precio Unitario:</strong> ${{productPrice}}</p>
             <p><strong>Cantidad:</strong> {{cantidad}}</p>
             <p><strong>Precio Total:</strong> ${{totalPrice}}</p>
         </div>
-
-
         </div>
     </div>
 </body>

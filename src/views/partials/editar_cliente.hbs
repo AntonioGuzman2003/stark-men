@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Cliente</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Editar Cliente</h1>
-    <form action="/clientes/editar/{{cliente.id}}" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" value="{{cliente.nombre}}" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="{{cliente.email}}" required><br><br>
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono" value="{{cliente.telefono}}"><br><br>
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" value="{{cliente.direccion}}"><br><br>
-        <button type="submit">Guardar Cambios</button>
-    </form>
+    <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-md-6">
+        <h1>Editar Cliente</h1>
+        <form action="/clientes/editar/{{cliente.id}}" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{cliente.nombre}}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{cliente.email}}" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" class="form-control" id="telefono" name="telefono" value="{{cliente.telefono}}">
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" value="{{cliente.direccion}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </form>
+            </div>
+         </div>
+    </div>
 </body>
 </html>

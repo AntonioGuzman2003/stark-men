@@ -39,6 +39,10 @@ app.get('/ventas', (req, res) => {
     res.render('index2', { layout: 'main2' });
 });
 
+// Ruta para la página de ventas
+app.get('/producto', (req, res) => {
+    res.render('index4', { layout: 'main5' });
+});
 // Ruta para procesar el formulario de compra
 app.post('/realizarCompra', (req, res) => {
     const productName = req.body.productName;
